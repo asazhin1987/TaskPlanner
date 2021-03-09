@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ninject" Version="3.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mapper\Mapper.csproj" />
+    <ProjectReference Include="..\TaskPlanner.DAL\TaskPlanner.DAL.csproj" />
+    <ProjectReference Include="..\TaskPlanner.DTO\TaskPlanner.DTO.csproj" />
+  </ItemGroup>
+
+</Project>

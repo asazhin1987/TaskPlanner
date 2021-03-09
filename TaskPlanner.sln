@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskPlanner.DAL", "TaskPlanner.DAL\TaskPlanner.DAL.csproj", "{94D18AFE-59BC-4F8E-9498-EBA6F471441F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskPlanner.Tests", "TaskPlanner.Tests\TaskPlanner.Tests.csproj", "{334BA24F-A5DD-4C1A-8D69-3433A76BA5BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskPlanner.BLL", "TaskPlanner.BLL\TaskPlanner.BLL.csproj", "{209C1666-BD40-414D-A841-A319038AA190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskPlanner.DTO", "TaskPlanner.DTO\TaskPlanner.DTO.csproj", "{B60F3618-0E92-48CD-B386-F4168EF9AB76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mapper", "Mapper\Mapper.csproj", "{A96C25BD-C06C-4D94-8C1B-EC8043B27E36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskPlanner.Web", "TaskPlanner.Web\TaskPlanner.Web.csproj", "{AF55520F-D250-401F-917E-4BD903EF1E0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94D18AFE-59BC-4F8E-9498-EBA6F471441F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D18AFE-59BC-4F8E-9498-EBA6F471441F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D18AFE-59BC-4F8E-9498-EBA6F471441F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D18AFE-59BC-4F8E-9498-EBA6F471441F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{334BA24F-A5DD-4C1A-8D69-3433A76BA5BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334BA24F-A5DD-4C1A-8D69-3433A76BA5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334BA24F-A5DD-4C1A-8D69-3433A76BA5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334BA24F-A5DD-4C1A-8D69-3433A76BA5BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{209C1666-BD40-414D-A841-A319038AA190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{209C1666-BD40-414D-A841-A319038AA190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{209C1666-BD40-414D-A841-A319038AA190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{209C1666-BD40-414D-A841-A319038AA190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B60F3618-0E92-48CD-B386-F4168EF9AB76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B60F3618-0E92-48CD-B386-F4168EF9AB76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B60F3618-0E92-48CD-B386-F4168EF9AB76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B60F3618-0E92-48CD-B386-F4168EF9AB76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A96C25BD-C06C-4D94-8C1B-EC8043B27E36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A96C25BD-C06C-4D94-8C1B-EC8043B27E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A96C25BD-C06C-4D94-8C1B-EC8043B27E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A96C25BD-C06C-4D94-8C1B-EC8043B27E36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF55520F-D250-401F-917E-4BD903EF1E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF55520F-D250-401F-917E-4BD903EF1E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF55520F-D250-401F-917E-4BD903EF1E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF55520F-D250-401F-917E-4BD903EF1E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18E3F254-A1AC-442B-8A80-EBC07FE13815}
+	EndGlobalSection
+EndGlobal
