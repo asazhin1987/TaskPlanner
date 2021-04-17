@@ -1,0 +1,30 @@
+﻿
+    <script>
+    $(function () {
+        $('#createtaskbtn').click(function () {
+            $.ajax({
+                type: "GET",
+                url: "CreateAssignment",
+                beforeSend: function() {
+                    $("#locloading").show();
+                },
+                success: function(data){
+                    $('#rightdialog').html(data);
+                    $("#locloading").hide();
+                },
+            });
+        })
+
+    });
+    </script>
+
+
+    <div class="d-flex flex-row">
+        <button class="dropdown-item  text-lowercase" data-toggle="modal" data-target="#rightModal"
+                id="createtaskbtn">
+            @Resources.Controls.CreateNew
+        </button>
+    </div>
+
+
+    

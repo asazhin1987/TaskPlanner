@@ -42,14 +42,14 @@ namespace TaskPlanner.Tests
 		
 		readonly IEnumerable<Assignment> assignments = new List<Assignment>
 		{
-			new Assignment { Id = 1, ProjectId = 1, TypicalAssignmentId  = 1, UserId = 1, StartMinuteId =1, StartHourId = 1, DurationHourId = 2, DurationMinuteId = 1, Date = new DateTime(2021, 01, 01) },
-			new Assignment { Id = 2, ProjectId = 1, TypicalAssignmentId  = 1, UserId = 1, StartMinuteId =1, StartHourId = 2, DurationHourId = 2, DurationMinuteId = 1, Date = new DateTime(2021, 01, 01) },
-			new Assignment { Id = 3, ProjectId = 1, TypicalAssignmentId  = 2, UserId = 1, StartMinuteId =1, StartHourId = 3, DurationHourId = 2, DurationMinuteId = 1, Date = new DateTime(2021, 01, 01) },
-			new Assignment { Id = 4, ProjectId = 2, TypicalAssignmentId  = 2, UserId = 1, StartMinuteId =1, StartHourId = 4, DurationHourId = 2, DurationMinuteId = 2, Date = new DateTime(2021, 01, 01) },
-			new Assignment { Id = 5, ProjectId = 2, TypicalAssignmentId  = 2, UserId = 1, StartMinuteId =1, StartHourId = 6, DurationHourId = 2, DurationMinuteId = 2, Date = new DateTime(2021, 01, 01) },
-			new Assignment { Id = 6, ProjectId = 2, TypicalAssignmentId  = 2, UserId = 1, StartMinuteId =1, StartHourId = 7, DurationHourId = 2, DurationMinuteId = 1, Date = new DateTime(2021, 01, 01) },
-			new Assignment { Id = 7, ProjectId = 3, TypicalAssignmentId  = 1, UserId = 1, StartMinuteId =1, StartHourId = 8, DurationHourId = 1, DurationMinuteId = 2, Date = new DateTime(2021, 01, 01) },
-			new Assignment { Id = 8, ProjectId = 3, TypicalAssignmentId  = 3, UserId = 1, StartMinuteId =1, StartHourId = 8, DurationHourId = 1, DurationMinuteId = 2, Date = new DateTime(2021, 01, 01) },
+			new Assignment { Id = 1, ProjectId = 1, TypicalAssignmentId  = 1, UserId = 1, StartMinuteId =1, StartHourId = 1, DurationHourId = 2, DurationMinuteId = 1, },
+			new Assignment { Id = 2, ProjectId = 1, TypicalAssignmentId  = 1, UserId = 1, StartMinuteId =1, StartHourId = 2, DurationHourId = 2, DurationMinuteId = 1, },
+			new Assignment { Id = 3, ProjectId = 1, TypicalAssignmentId  = 2, UserId = 1, StartMinuteId =1, StartHourId = 3, DurationHourId = 2, DurationMinuteId = 1, },
+			new Assignment { Id = 4, ProjectId = 2, TypicalAssignmentId  = 2, UserId = 1, StartMinuteId =1, StartHourId = 4, DurationHourId = 2, DurationMinuteId = 2, },
+			new Assignment { Id = 5, ProjectId = 2, TypicalAssignmentId  = 2, UserId = 1, StartMinuteId =1, StartHourId = 6, DurationHourId = 2, DurationMinuteId = 2, },
+			new Assignment { Id = 6, ProjectId = 2, TypicalAssignmentId  = 2, UserId = 1, StartMinuteId =1, StartHourId = 7, DurationHourId = 2, DurationMinuteId = 1, },
+			new Assignment { Id = 7, ProjectId = 3, TypicalAssignmentId  = 1, UserId = 1, StartMinuteId =1, StartHourId = 8, DurationHourId = 1, DurationMinuteId = 2, },
+			new Assignment { Id = 8, ProjectId = 3, TypicalAssignmentId  = 3, UserId = 1, StartMinuteId =1, StartHourId = 8, DurationHourId = 1, DurationMinuteId = 2, },
 		};
 
 		#endregion init data
@@ -84,7 +84,7 @@ namespace TaskPlanner.Tests
 			p3.TypicalAssignments.Add(a3);
 
 			// ProjId	| 1 | 2 | 3 |
-			//_____________________
+			//_______________________
 			//	 1		| x | x | X |
 			//	 2		| x | x |   |
 			//	 3		|   | x | x |

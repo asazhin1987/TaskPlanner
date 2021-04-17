@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/taskplanner/css/menu.css" />
+    <link rel="stylesheet" href="~/lib/taskplanner/css/site.css" />
+
+    <script src="~/lib/taskplanner/js/ui.js"></script>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+    </environment>
+
+    <environment exclude="Development">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    </environment>
+
+</head>
+
+
+<body class="vh-100 d-flex flex-row m-0">
+
+    <div id="sidebar" class="d-flex flex-column p-0 bg-dark-green">
+        HELLO
+        <br />
+        @await Component.InvokeAsync("Menu")
+    </div>
+    <div class="col vh-100 overflow-auto p-0 ">
+        <header class="sticky-top" >
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm shadow-sm navbar-light bg-white m-0" style="height:60px!important;">
+                <div class="container-fluid pl-0 ">
+                    <div class="col p-0 " id="additional_menu">
+
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        @await Component.InvokeAsync("Login")
+                        <ul class="navbar-nav flex-grow-1">
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <partial name="_Modal" />
+
+    <environment include="Development">
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        <script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+    </environment>
+
+    <environment exclude="Development">
+            <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+            <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+            <script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
+     </environment>
+
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

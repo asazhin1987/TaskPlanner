@@ -1,20 +1,14 @@
-﻿using Ninject.Modules;
-using TaskPlanner.DAL.Interfaces;
-using TaskPlanner.DAL.Repositories;
+﻿using TaskPlanner.DAL.Repositories;
+using TaskPlanner.BLL.Interfaces;
+using TaskPlanner.BLL.Services;
 
 namespace TaskPlanner.BLL.Infrastructure
 {
-	public class ServiceModule : NinjectModule
+	public class ServiceModule 
 	{
-		private readonly string connectionString;
-		public ServiceModule(string connection)
+		public static ITaskPlannerService CreateInstance(string connection)
 		{
-			connectionString = connection;
-		}
-		public override void Load()
-		{
-
-			Bind<IUnitOfWork>().To<EFUnitOfWork>().WithConstructorArgument(connectionString);
+			return new TaskPlannerService(new EFUnitOfWork(connection));
 		}
 	}
 }

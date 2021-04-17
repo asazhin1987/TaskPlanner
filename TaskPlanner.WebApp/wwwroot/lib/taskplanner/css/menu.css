@@ -1,0 +1,70 @@
+﻿
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#sidebar {
+    width: 300px;
+    transition: all 0.3s;
+}
+
+.sidebarrowcontainer {
+    padding: 4px !important;
+}
+
+.sidebaractive {
+    background-color: #34495E;
+}
+
+
+
+    .sidebaractive .sidecb {
+        background-color: #1abc9c !important;
+    }
+
+.sidebaritemimage {
+    height: 16px;
+    width: 16px;
+    margin-left: 8px;
+    opacity: 0.5;
+}
+
+.sidebaractive .sidebaritemimage {
+    opacity: 1;
+}
+
+.d-collapse {
+    display: none;
+}
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 60px;
+    }
+
+    .sidebarcaption {
+        display: none !important;
+    }
+
+    .sidebarimage {
+        height: 50px;
+        width: 50px;
+    }
+
+    .sidebaritemimage {
+        height: 32px;
+        width: 32px;
+        margin-left: 8px;
+    }
+
+    .sidebarrowcontainer {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .d-collapse {
+        display: flex !important;
+    }
+}

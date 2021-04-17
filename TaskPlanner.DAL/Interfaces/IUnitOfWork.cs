@@ -40,5 +40,15 @@ namespace TaskPlanner.DAL.Interfaces
 		/// Фонд рабочего времени
 		/// </summary>
 		IRepository<WTF> WTFs { get; }
+
+		/// <summary>
+		/// Таблица связи проектов и типовых задач для пользователей
+		/// </summary>
+		IRepository<ProjectAssignmentRelation> ProjectAssignmentRelations { get; }
+
+		/// <summary>
+		/// Команды
+		/// </summary>
+		IRepository<Team> Teams { get; }
 	}
 }

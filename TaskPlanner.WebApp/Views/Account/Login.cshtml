@@ -1,0 +1,27 @@
+﻿@model SignInModel
+
+@{
+    Layout = "~/Views/Shared/_NotAuthorizedLayout.cshtml";
+}
+
+    <form asp-action="Login" asp-controller="Account" asp-anti-forgery="true">
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+        <div>
+            <div>
+                <label asp-for="Login"></label><br />
+                <input type="text" asp-for="Login" />
+                <span asp-validation-for="Login"></span>
+            </div>
+            <div>
+                <label asp-for="Password"></label><br />
+                <input asp-for="Password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+
+            <div>
+                <input type="submit" value="@Resources.Controls.SignIn" />
+            </div>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">@Resources.Controls.SignUp</a>
+        </div>
+    </form>
+

@@ -8,8 +8,11 @@ namespace TaskPlanner.DAL.EF
 	{
 		//Sys
 		public virtual DbSet<User> Users { get; set; }
+		public virtual DbSet<UserSetting> UserSettings { get; set; }
+		public virtual DbSet<Team> Teams { get; set; }
 		public virtual DbSet<Hour> Hours { get; set; }
 		public virtual DbSet<Minute> Minutes { get; set; }
+		public virtual DbSet<ProjectAssignmentRelation> ProjectAssignmentRelations { get; set; }
 		//Users
 		public virtual DbSet<Project> Projects { get; set; }
 		public virtual DbSet<TypicalAssignment> TypicalAssignments { get; set; }
@@ -19,15 +22,41 @@ namespace TaskPlanner.DAL.EF
 		public TaskPlannerContext(DbContextOptions<TaskPlannerContext> options)
 			: base(options)
 		{
+			
 			Database.EnsureCreated();
 		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+			//modelBuilder.Entity<Project>()
+			//   .HasMany(c => c.TypicalAssignments)
+			//   .WithMany(s => s.Projects)
+			//   .UsingEntity(j => j.ToTable("ProjectsTypicalAssignments"));
+
 			modelBuilder.Entity<Project>()
-			   .HasMany(c => c.TypicalAssignments)
+			   .HasMany(c => c.Users)
 			   .WithMany(s => s.Projects)
-			   .UsingEntity(j => j.ToTable("ProjectsTypicalAssignments"));
+			   .UsingEntity(j => j.ToTable("ProjectsUsers"));
+
+			modelBuilder.Entity<TypicalAssignment>()
+			   .HasMany(c => c.Users)
+			   .WithMany(s => s.TypicalAssignments)
+			   .UsingEntity(j => j.ToTable("TypicalAssignmentsUsers"));
+
+			modelBuilder.Entity<User>()
+			   .HasMany(c => c.TeamsParticipation)
+			   .WithMany(s => s.Participants)
+			   .UsingEntity(j => j.ToTable("UserTeamParticipations"));
+
+			modelBuilder.Entity<WTF>()
+				.HasKey(c => new { c.MonthId, c.UserId });
+
+			modelBuilder.Entity<ProjectAssignmentRelation>()
+				.HasKey(c => new { c.ProjectId, c.UserId, c.TypicalAssignmentId });
+
+			modelBuilder.Entity<User>()
+				.HasIndex(i => new { i.Login, i.Password } );
+
 			int i = 0;
 			modelBuilder.Entity<Hour>().HasData(new Hour { Id = ++i, Value = 0 });
 			modelBuilder.Entity<Hour>().HasData(new Hour { Id = ++i, Value = 1 });

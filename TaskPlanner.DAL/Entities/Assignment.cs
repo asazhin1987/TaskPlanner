@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+
 
 namespace TaskPlanner.DAL.Entities
 {
@@ -32,6 +31,8 @@ namespace TaskPlanner.DAL.Entities
 
 		public Minute StartMinute { get; set; }
 
+		public DateTime StartDateTime { get; set; }
+
 		public int? DurationHourId { get; set; }
 
 		public Hour DurationHour { get; set; }
@@ -40,7 +41,9 @@ namespace TaskPlanner.DAL.Entities
 
 		public Minute DurationMinute { get; set; }
 
-		public DateTime Date { get; set; }
+		public DateTime EndDateTime { get; set; }
+
+		//public DateTime Date { get; set; }
 
 	}
 }

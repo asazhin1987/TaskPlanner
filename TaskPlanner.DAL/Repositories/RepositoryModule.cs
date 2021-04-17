@@ -40,4 +40,14 @@ namespace TaskPlanner.DAL.Repositories
 		public WTFRepository(TaskPlannerContext context) : base(context) { }
 	}
 
+	public class ProjectAssignmentRelationRepository : Repository<ProjectAssignmentRelation>
+	{
+		public ProjectAssignmentRelationRepository(TaskPlannerContext context) : base(context) { }
+	}
+
+	public class TeamRepository : Repository<Team>
+	{
+		public TeamRepository(TaskPlannerContext context) : base(context) { }
+	}
+
 }

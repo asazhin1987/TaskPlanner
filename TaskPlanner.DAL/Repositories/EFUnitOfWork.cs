@@ -18,6 +18,8 @@ namespace TaskPlanner.DAL.Repositories
 		HourRepository hourRepository;
 		MinuteRepository minuteRepository;
 		WTFRepository wtfRepository;
+		ProjectAssignmentRelationRepository projectAssignmentRelationRepository;
+		TeamRepository teamRepository;
 
 		public EFUnitOfWork(string connectionString)
 		{
@@ -103,6 +105,26 @@ namespace TaskPlanner.DAL.Repositories
 				if (wtfRepository == null)
 					wtfRepository = new WTFRepository(db);
 				return wtfRepository;
+			}
+		}
+
+		public IRepository<ProjectAssignmentRelation> ProjectAssignmentRelations
+		{
+			get
+			{
+				if (projectAssignmentRelationRepository == null)
+					projectAssignmentRelationRepository = new ProjectAssignmentRelationRepository(db);
+				return projectAssignmentRelationRepository;
+			}
+		}
+
+		public IRepository<Team> Teams
+		{
+			get
+			{
+				if (teamRepository == null)
+					teamRepository = new TeamRepository(db);
+				return teamRepository;
 			}
 		}
 

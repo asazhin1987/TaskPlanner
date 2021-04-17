@@ -1,0 +1,15 @@
+﻿
+
+
+
+
+<h1>TEAM</h1>
+
+<script>
+    $(document).ready(function () {
+        $("#results").load('@Url.Action("ProjectsAndTasksTable", "Team")');
+        $('#additional_menu').load('@Url.Action("AdditionalMenu", "Team")');
+    })
+</script>
+
+

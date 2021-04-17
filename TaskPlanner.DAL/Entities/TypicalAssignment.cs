@@ -14,14 +14,20 @@ namespace TaskPlanner.DAL.Entities
 		[StringLength(255)]
 		public string Description { get; set; }
 
-		public ICollection<Project> Projects { get; set; }
+		//public ICollection<Project> Projects { get; set; }
 
 		public ICollection<Assignment> Assignments { get; set; }
 
+		public ICollection<ProjectAssignmentRelation> ProjectAssignmentRelations { get; set; }
+
+		public ICollection<User> Users { get; set; }
+
 		public TypicalAssignment()
 		{
-			Projects = new List<Project>();
+			//Projects = new List<Project>();
 			Assignments = new List<Assignment>();
+			ProjectAssignmentRelations = new List<ProjectAssignmentRelation>();
+			Users = new List<User>();
 		}
 	}
 }

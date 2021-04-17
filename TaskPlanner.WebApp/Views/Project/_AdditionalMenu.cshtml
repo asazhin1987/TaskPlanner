@@ -1,0 +1,72 @@
+﻿
+
+<script>
+    $(function () {
+        $('#createprojbtn').click(function () {
+            $.ajax({
+                type: "GET", 
+                url: "CreateProject", 
+                beforeSend: function() {
+                    $("#locloading").show();
+                },
+                success: function(data){
+                    $('#rightdialog').html(data);
+                    $("#locloading").hide();
+                },
+            });
+        })
+
+        $('#createtaskbtn').click(function () {
+            $.ajax({
+                type: "GET", 
+                url: "CreateTypicalAssignment", 
+                beforeSend: function() {
+                    $("#locloading").show();
+                },
+                success: function(data){
+                    $('#rightdialog').html(data);
+                    $("#locloading").hide();
+                },
+            });
+        })
+    });
+</script>
+
+<div class="d-flex flex-row">
+    <div class="dropdown">
+        <button type="button" class="btn btn-sm btn-light "
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,0" id="projmenu">
+            @Resources.Controls.CreateProject
+        </button>
+        <span class="dropdown-menu bg-white shadow border-0" aria-labelledby="projmenu">
+            <button class="dropdown-item  text-lowercase" data-toggle="modal" data-target="#rightModal"
+                    id="createprojbtn">
+                @Resources.Controls.CreateNew
+            </button>
+            <button class="dropdown-item  text-lowercase" data-toggle="modal" data-target="#rightModal"
+                    id="loadprojbtn">
+                @Resources.Controls.Load
+            </button>
+        </span>
+    </div>
+    <div class="dropdown ml-2">
+        <button type="button" class="btn btn-sm btn-light "
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,0" id="taskmenu">
+            @Resources.Controls.CreateTask
+        </button>
+        <span class="dropdown-menu bg-white shadow border-0" aria-labelledby="taskmenu">
+            <button class="dropdown-item  text-lowercase" data-toggle="modal" data-target="#rightModal"
+                    id="createtaskbtn">
+                @Resources.Controls.CreateNew
+            </button>
+            <button class="dropdown-item  text-lowercase" data-toggle="modal" data-target="#rightModal"
+                    id="loadtaskbtn">
+                @Resources.Controls.Load
+            </button>
+        </span>
+    </div>
+
+</div>
+
+
+

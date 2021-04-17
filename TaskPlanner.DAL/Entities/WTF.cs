@@ -7,12 +7,12 @@ namespace TaskPlanner.DAL.Entities
 {
 	public class WTF
 	{
-		[Key]
-		[Column(Order = 0)]
+		//[Key]
+		//[Column(Order = 0)]
 		public int MonthId { get; set; }
 
-		[Key]
-		[Column(Order = 1)]
+		//[Key]
+		//[Column(Order = 1)]
 		public int UserId { get; set; }
 
 		public User User { get; set; }

@@ -1,0 +1,103 @@
+﻿
+@model ProjectTypicalAssignmentModel
+
+<link href="~/lib/taskplanner/css/table.css" rel="stylesheet" />
+
+
+<script>
+    function ToggleCheckbox(aggId, projId, e) {
+        $.post("ToggleProjectTask",
+            {
+                taskId: aggId,
+                projectId: projId,
+                chcd: e.checked
+            })
+    }
+</script>
+
+<script>
+   $(function(){
+       $('.editproj').click(function (e) {
+           $.ajax({
+              type: 'GET',
+              url: 'EditProject',
+              data: 'Id=' + e.target.id,
+              success: function(data){
+            $('#rightdialog').html(data);
+          }
+        });
+       });
+
+       $('.edittask').click(function (e) {
+           $.ajax({
+              type: 'GET',
+              url: 'EditTypicalAssignment',
+              data: 'Id=' + e.target.id,
+              success: function(data){
+            $('#rightdialog').html(data);
+          }
+        });
+        });
+   });
+
+</script>
+
+
+
+
+<div class="d-inline-flex flex-column ">
+    <!--HEADER-->
+    <div class="d-flex flex-row t-header bg-white border-bottom border-dark-green">
+        <span class="d-flex flex-row t-corner border-right bg-white">
+            <span class="fix-w-40  p-2">@Resources.Fields.Id</span>
+            <span class="col  p-2">@Resources.Fields.Name</span>
+            <span class="fix-w-40"></span>
+            <span class="fix-w-40"></span>
+        </span>
+        @foreach (var proj in Model.Projects.AsParallel().AsOrdered())
+        {
+
+            <span class="d-flex flex-column">
+                <span class="d-flex flex-row">
+                    <span class="rounded-circle fix-w-16 fix-h-16" style="background-color:#@(proj.Color);"></span>
+                    <button class="editproj" id="@proj.Id"
+                            data-toggle="modal" data-target="#rightModal">
+                        &#9998;
+                    </button>
+                    <button>&#10005;</button>
+                </span>
+                <span class="fix-w-200">@proj.Name</span>
+            </span>
+        }
+    </div>
+    <!--BODY-->
+    @foreach (var agg in Model.TypicalAssignments.AsParallel().AsOrdered())
+    {
+        <span class="t-row d-flex flex-row border-bottom border-light">
+            <span class="d-flex flex-row t-left border-right bg-white">
+                <span class="fix-w-40 p-2">@agg.Id</span>
+                <span class="col p-2">@agg.Name</span>
+                <span class="fix-w-40 p-2">
+                    <button class="edittask btn btn-sm btn-light" id="@agg.Id"
+                            data-toggle="modal" data-target="#rightModal">
+                        &#9776;
+                    </button>
+                </span>
+                <span class="fix-w-40 p-2">
+                    <button class="btn btn-sm btn-outline-danger border-0">&#10005;</button>
+                </span>
+               
+            </span>
+            @foreach (var proj in Model.Projects.AsParallel().AsOrdered())
+            {
+                string id = $"{agg.Id};{proj.Id}";
+                <span class="fix-w-200 border-right border-light">
+                    <input id="@id" type="checkbox" class="toggle-checkbox"
+                           @(agg.ProjectDTOs.Select(x => x.Id).Contains(proj.Id) ? "checked='checked'" : string.Empty)
+                           onchange="ToggleCheckbox(@(agg.Id), @(proj.Id), this);" />
+                </span>
+            }
+        </span>
+    }
+
+</div>
