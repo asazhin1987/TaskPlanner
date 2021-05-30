@@ -13,9 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskPlanner.DTO", "TaskPlan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mapper", "Mapper\Mapper.csproj", "{A96C25BD-C06C-4D94-8C1B-EC8043B27E36}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.Ext", "System.Ext\System.Ext.csproj", "{3212ADD8-CC1E-4EEA-8EF3-CBC86FD65309}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskPlanner.WebApp", "TaskPlanner.WebApp\TaskPlanner.WebApp.csproj", "{C89856FD-BCE0-4F33-BD2C-00B6E1A74FB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskPlanner.WebApp", "TaskPlanner.WebApp\TaskPlanner.WebApp.csproj", "{C89856FD-BCE0-4F33-BD2C-00B6E1A74FB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,10 +41,6 @@ Global
 		{A96C25BD-C06C-4D94-8C1B-EC8043B27E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A96C25BD-C06C-4D94-8C1B-EC8043B27E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A96C25BD-C06C-4D94-8C1B-EC8043B27E36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3212ADD8-CC1E-4EEA-8EF3-CBC86FD65309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3212ADD8-CC1E-4EEA-8EF3-CBC86FD65309}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3212ADD8-CC1E-4EEA-8EF3-CBC86FD65309}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3212ADD8-CC1E-4EEA-8EF3-CBC86FD65309}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C89856FD-BCE0-4F33-BD2C-00B6E1A74FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C89856FD-BCE0-4F33-BD2C-00B6E1A74FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C89856FD-BCE0-4F33-BD2C-00B6E1A74FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU

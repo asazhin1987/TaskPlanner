@@ -135,4 +135,7 @@
   <data name="WrongPassword" xml:space="preserve">
     <value>Неверный пароль</value>
   </data>
+  <data name="WrongViewType" xml:space="preserve">
+    <value>Неверный тип представления</value>
+  </data>
 </root>

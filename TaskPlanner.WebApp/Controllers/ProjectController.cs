@@ -10,7 +10,7 @@ using TaskPlanner.DTO;
 using TaskPlanner.WebApp.Filters;
 using Mapper;
 
-using static TaskPlanner.WebApp.Application.Enums;
+using TaskPlanner.WebApp.Application;
 
 namespace TaskPlanner.WebApp.Controllers
 {

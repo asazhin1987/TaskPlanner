@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static TaskPlanner.WebApp.Application.Enums;
+using TaskPlanner.WebApp.Application;
 using Microsoft.AspNetCore.Mvc.Filters;
 using TaskPlanner.WebApp.Controllers;
 

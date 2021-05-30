@@ -1,3 +1,48 @@
 ﻿
-<h1>MERGE HELLO</h1>
+@model AssignmentModel
 
+
+
+<h1>MERGE TASK</h1>
+
+
+
+<form asp-action="MergeAssignment" asp-controller="Assignment" asp-anti-forgery="true"
+      data-ajax="true"
+      data-ajax-method="POST"
+      data-ajax-mode="replace"
+      data-ajax-update="#rightdialog"
+      data-ajax-loading="#locloading"
+      id="mergepform">
+</form>
+
+<div class="p-2">
+
+    <input asp-for="Id" type="hidden" />
+
+    <div class="form-group">
+        <label asp-for="Name" class=""></label>
+        <div>
+            <input type="text" asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description" class=""></label>
+        <div>
+            <textarea type="text" rows="4" cols="10" asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="d-flex flex-row">
+    <button type="submit" class="btn btn-light col-6">@Resources.Controls.Cancel</button>
+    <button type="submit" form="mergepform" class="btn btn-primary col-6">@Resources.Controls.Save</button>
+</div>

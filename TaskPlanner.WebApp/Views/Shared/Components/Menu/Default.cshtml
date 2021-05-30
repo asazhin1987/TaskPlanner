@@ -2,7 +2,7 @@
 @model MenuModel
 
 @{ 
-    Enums.MenuItem activeItem =  (Enums.MenuItem)TempData["ActiveItem"];
+    MenuItem activeItem =  (MenuItem)TempData["ActiveItem"];
 }
 
 @foreach (var item in Model.Items)

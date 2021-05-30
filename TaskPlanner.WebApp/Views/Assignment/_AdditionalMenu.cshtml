@@ -1,14 +1,17 @@
 ﻿
-    <script>
+@model AssignmentAdditionalMenuModel
+
+
+<script>
     $(function () {
         $('#createtaskbtn').click(function () {
             $.ajax({
                 type: "GET",
                 url: "CreateAssignment",
-                beforeSend: function() {
+                beforeSend: function () {
                     $("#locloading").show();
                 },
-                success: function(data){
+                success: function (data) {
                     $('#rightdialog').html(data);
                     $("#locloading").hide();
                 },
@@ -16,15 +19,46 @@
         })
 
     });
-    </script>
+</script>
 
+<script>
 
-    <div class="d-flex flex-row">
-        <button class="dropdown-item  text-lowercase" data-toggle="modal" data-target="#rightModal"
-                id="createtaskbtn">
-            @Resources.Controls.CreateNew
-        </button>
+    $(document).ready(function () {
+        $("#updateform").submit();
+    })
+</script>
+
+<section class="d-none">
+    <!--filter form-->
+    <form asp-action="TasksPartial" asp-controller="Assignment"
+          data-ajax="true"
+          data-ajax-method="GET"
+          data-ajax-mode="replace"
+          data-ajax-update="#results"
+          data-ajax-loading=""
+          id="updateform">
+    </form>
+</section>
+
+<div class="d-flex flex-row ">
+    <button class="dropdown-item  text-lowercase" data-toggle="modal" data-target="#rightModal"
+            id="createtaskbtn">
+        @Resources.Controls.CreateNew
+    </button>
+    <div class="col"></div>
+    <div class="mt-1 d-flex flex-row align-items-center ">
+        <input type="radio" name="ViewType" id="ReportInput_@ViewType.Table" form="updateform"
+               value="@ViewType.Table" class="d-none" @(Model.ViewType == ViewType.Table ? "checked = 'checked'" : "") onchange="UpdateReport()" />
+        <label class="btn view-menu-btn m-0 p-0 btn-table-view" for="ReportInput_@ViewType.Table" id="chartBtn">
+            <span>@Resources.Controls.Table</span>
+        </label>
+
+        <input type="radio" name="ViewType" id="ReportInput_@ViewType.Calendar" form="updateform"
+               value="@ViewType.Calendar" class="d-none" @(Model.ViewType == ViewType.Calendar ? "checked = 'checked'" : "") onchange="UpdateReport()" />
+        <label class="btn view-menu-btn m-0 p-0 btn-calendar-view" for="ReportInput_@ViewType.Calendar" id="chartBtn">
+            <span>@Resources.Controls.Calendar</span>
+        </label>
     </div>
+</div>
 
 
-    

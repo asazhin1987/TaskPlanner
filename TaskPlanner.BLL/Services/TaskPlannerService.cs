@@ -10,6 +10,7 @@ using Mapper;
 using Microsoft.EntityFrameworkCore;
 using TaskPlanner.DTO.Infrastructure;
 using TaskPlanner.DAL.Entities;
+using static Mapper.Extensions;
 
 namespace TaskPlanner.BLL.Services
 {
@@ -171,6 +172,29 @@ namespace TaskPlanner.BLL.Services
 		#endregion getfiltered
 
 		#endregion project
+
+
+		#region calendar
+
+		public IEnumerable<MonthDTO> GetAllMonths(int year)
+		{
+			for (byte b = 1; b <= 12; b++)
+				yield return new MonthDTO
+				{
+					MonthId = GetMonthId(year, b)
+				};
+		}
+
+		public IEnumerable<WeekDayDTO> GetWeekDays()
+		{
+			foreach (var wd in Enum.GetValues(typeof(DayOfWeek)))
+				yield return new WeekDayDTO
+				{
+					Id = (int)wd
+				};
+		}
+
+		#endregion
 
 
 		#region Typical assignments

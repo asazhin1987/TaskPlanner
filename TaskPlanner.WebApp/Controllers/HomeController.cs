@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using TaskPlanner.BLL.Interfaces;
 using TaskPlanner.WebApp.Filters;
 using TaskPlanner.WebApp.Models;
-using static TaskPlanner.WebApp.Application.Enums;
+using TaskPlanner.WebApp.Application;
 
 namespace TaskPlanner.WebApp.Controllers
 {

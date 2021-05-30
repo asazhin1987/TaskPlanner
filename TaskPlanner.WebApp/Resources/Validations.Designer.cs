@@ -113,5 +113,14 @@ namespace Resources {
                 return ResourceManager.GetString("WrongPassword", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Неверный тип представления.
+        /// </summary>
+        internal static string WrongViewType {
+            get {
+                return ResourceManager.GetString("WrongViewType", resourceCulture);
+            }
+        }
     }
 }

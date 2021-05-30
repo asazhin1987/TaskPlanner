@@ -25,29 +25,21 @@
 <body class="vh-100 d-flex flex-row m-0">
 
     <div id="sidebar" class="d-flex flex-column p-0 bg-dark-green">
-        HELLO
-        <br />
+        <div class="">
+            @await Component.InvokeAsync("Login")
+        </div>
         @await Component.InvokeAsync("Menu")
     </div>
     <div class="col vh-100 overflow-auto p-0 ">
-        <header class="sticky-top" >
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm shadow-sm navbar-light bg-white m-0" style="height:60px!important;">
-                <div class="container-fluid pl-0 ">
-                    <div class="col p-0 " id="additional_menu">
+        <!--head menu-->
+        <div class="position-sticky bg-light p-0 d-flex flex-row" style="top:0;z-index:99;">
+            <div class="col p-0" id="additional_menu">
 
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                        @await Component.InvokeAsync("Login")
-                        <ul class="navbar-nav flex-grow-1">
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+            </div>
+           
+            
+        </div>
+      
         <main role="main">
             @RenderBody()
         </main>

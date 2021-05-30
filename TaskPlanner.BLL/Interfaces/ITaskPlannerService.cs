@@ -14,6 +14,9 @@ namespace TaskPlanner.BLL.Interfaces
 		Task<IEnumerable<HourDTO>> GetDurationHoursAsync();
 		//Minute
 		Task<IEnumerable<MinuteDTO>> GetAllMinutesAsync();
+		//calendar
+		IEnumerable<MonthDTO> GetAllMonths(int year);
+		IEnumerable<WeekDayDTO> GetWeekDays();
 
 		//Typical Assignment
 		Task MergeTypicalAssignmentAsync(TypicalAssignmentDTO item, int userId);

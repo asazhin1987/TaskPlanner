@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mapper\Mapper.csproj" />
-    <ProjectReference Include="..\System.Ext\System.Ext.csproj" />
     <ProjectReference Include="..\TaskPlanner.BLL\TaskPlanner.BLL.csproj" />
     <ProjectReference Include="..\TaskPlanner.DTO\TaskPlanner.DTO.csproj" />
   </ItemGroup>

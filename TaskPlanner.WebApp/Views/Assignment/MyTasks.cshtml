@@ -2,23 +2,12 @@
 
 
 <script>
+
     $(document).ready(function () {
-        $("#updateform").submit();
         $('#additional_menu').load('@Url.Action("AdditionalMenu", "Assignment")');
     })
 </script>
 
-<section class="d-none">
-    <!--filter form-->
-    <form asp-action="TasksPartial" asp-controller="Assignment"
-          data-ajax="true"
-          data-ajax-method="GET"
-          data-ajax-mode="replace"
-          data-ajax-update="#results"
-          data-ajax-loading=""
-          id="updateform">
-    </form>
-</section>
 
 
 <div id="results">

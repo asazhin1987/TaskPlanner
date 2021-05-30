@@ -4,18 +4,22 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TaskPlanner.WebApp.Application
 {
-	public class Enums
+	public enum MenuItem
 	{
-		public enum MenuItem 
-		{
-			
-			Home,
-			MyTasks,
-			Calendar,
-			ProjectManager,
-			Settings,
-			Plans, 
-			Team
-		}
+
+		Home,
+		MyTasks,
+		Calendar,
+		ProjectManager,
+		Settings,
+		Plans,
+		Team
 	}
+
+
+	public enum ViewType
+	{
+		Table, Calendar, Chart
+	}
+
 }

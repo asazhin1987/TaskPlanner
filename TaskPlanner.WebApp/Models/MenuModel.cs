@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static TaskPlanner.WebApp.Application.Enums;
+using TaskPlanner.WebApp.Application;
+
+using TaskPlanner.WebApp.Application;
 
 namespace TaskPlanner.WebApp.Models
 {
@@ -25,5 +27,18 @@ namespace TaskPlanner.WebApp.Models
 		public string ControllerName { get; set; }
 		public string ActionName { get; set; }
 		public MenuItem MenuItem { get; set; }
+	}
+
+	public class AssignmentAdditionalMenuModel
+	{
+		public ViewType ViewType { get; set; }
+
+
+		public AssignmentAdditionalMenuModel(ViewType viewType = ViewType.Calendar)
+		{
+			ViewType = viewType;
+		}
+
+		
 	}
 }

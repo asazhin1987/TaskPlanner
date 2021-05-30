@@ -20,12 +20,12 @@ namespace TaskPlanner.WebApp.Components
 			{
 				Items = new List<LinkMenuModel>
 				 {
-					new LinkMenuModel() { ActionName = "MyTasks", ControllerName = "Assignment", Image = "clock-32.png", MenuItem = Enums.MenuItem.MyTasks, Title = Resources.Menu.MyTasks  },
+					new LinkMenuModel() { ActionName = "MyTasks", ControllerName = "Assignment", Image = "clock-32.png", MenuItem = MenuItem.MyTasks, Title = Resources.Menu.MyTasks  },
 					//new LinkMenuModel() { ActionName = "", ControllerName = "", Image = "day-32.png", MenuItem = Enums.MenuItem.Calendar, Title = Resources.Menu.Calendar  },
-					new LinkMenuModel() { ActionName = "ProjectsAndTasks", ControllerName = "Project", Image = "project-32.png", MenuItem = Enums.MenuItem.ProjectManager, Title = Resources.Menu.ProjectsAndTasks  },
-					new LinkMenuModel() { ActionName = "MyGrandPlans", ControllerName = "Plan", Image = "planner-32.png", MenuItem = Enums.MenuItem.Plans, Title = Resources.Menu.WorkingTime  },
-					new LinkMenuModel() { ActionName = "MyParams", ControllerName = "Settings", Image = "myspace-32.png", MenuItem = Enums.MenuItem.Settings , Title = Resources.Menu.Settings},
-					new LinkMenuModel() { ActionName = "MyTeam", ControllerName = "Team", Image = "conference-32.png", MenuItem = Enums.MenuItem.Team , Title = Resources.Menu.MyTeam},
+					new LinkMenuModel() { ActionName = "ProjectsAndTasks", ControllerName = "Project", Image = "project-32.png", MenuItem = MenuItem.ProjectManager, Title = Resources.Menu.ProjectsAndTasks  },
+					new LinkMenuModel() { ActionName = "MyGrandPlans", ControllerName = "Plan", Image = "planner-32.png", MenuItem = MenuItem.Plans, Title = Resources.Menu.WorkingTime  },
+					new LinkMenuModel() { ActionName = "MyParams", ControllerName = "Settings", Image = "myspace-32.png", MenuItem = MenuItem.Settings , Title = Resources.Menu.Settings},
+					new LinkMenuModel() { ActionName = "MyTeam", ControllerName = "Team", Image = "conference-32.png", MenuItem = MenuItem.Team , Title = Resources.Menu.MyTeam},
 				 }
 			});
 		}

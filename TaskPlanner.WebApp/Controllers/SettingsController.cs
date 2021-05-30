@@ -8,7 +8,7 @@ using TaskPlanner.WebApp.Models;
 using TaskPlanner.BLL.Interfaces;
 using TaskPlanner.DTO;
 using TaskPlanner.WebApp.Filters;
-using static TaskPlanner.WebApp.Application.Enums;
+using TaskPlanner.WebApp.Application;
 namespace TaskPlanner.WebApp.Controllers
 {
     public class SettingsController : TaskPlannerController

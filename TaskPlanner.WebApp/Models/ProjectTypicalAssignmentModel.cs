@@ -10,6 +10,8 @@ namespace TaskPlanner.WebApp.Models
 		public IEnumerable<ProjectModel> Projects { get; set; }
 
 		public IEnumerable<TypicalAssignmentModel> TypicalAssignments { get; set; }
+		
+		
 
 		public ProjectTypicalAssignmentModel()
 		{
@@ -21,6 +23,7 @@ namespace TaskPlanner.WebApp.Models
 		{
 			Projects = projects.Select(x => (ProjectModel)x);
 			TypicalAssignments = tasks.Select(x => (TypicalAssignmentModel)x);
+			
 		}
 
 	}
